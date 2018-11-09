@@ -4,8 +4,9 @@
 <dl>
   <dt><%= @cocktail.name %></dt>
   <% @cocktail.doses.each do |dose| %>
-  <dd><%= dose.description %></dd>
-  <dd><%= dose.ingredient.name %></dd>
+    <dd><%= dose.photo %></dd>
+    <dd><%= dose.description %></dd>
+    <dd><%= dose.ingredient.name %></dd>
   <% end %>
 </dl>
 

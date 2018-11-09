@@ -2,10 +2,13 @@
 
 <h2>thecocktaildb.com</h2>
 
-<%= link_to "Create new cocktail", new_cocktail_path %>
+<div><%= link_to "Create new cocktail", new_cocktail_path %></div>
 
 <ul>
   <% @cocktails.each do |cocktail| %>
-  <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+  <li>
+    <%= cl_image_tag cocktail.photo, height: 150, width: 150, crop: :fill %>
+    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+  </li>
   <% end %>
 </ul>
