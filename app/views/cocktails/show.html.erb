@@ -3,11 +3,7 @@
 
 <dl>
   <dt><%= @cocktail.name %></dt>
-  <% @cocktail.doses.each do |dose| %>
-    <dd><%= dose.photo %></dd>
-    <dd><%= dose.description %></dd>
-    <dd><%= dose.ingredient.name %></dd>
-  <% end %>
+  <dd><%= cl_image_tag @cocktail.photo, height: 150, width: 150, crop: :fill %></dd>
 </dl>
 
 <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail) %>
